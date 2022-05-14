@@ -1,0 +1,383 @@
+@media screen and (min-width:975px){
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--White);
+        margin: 1.8rem 10rem;
+    }
+    /*Header*/
+    header{
+        position: sticky;
+        top: initial;
+        display: grid;
+        grid-template-columns: 0.14fr 0.75fr 0.065fr 0.065fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        border-bottom: 1px solid  var(--Grayishblue);
+        padding: 1.8rem 0rem 2.3rem;
+        width: 77vw;
+    }
+
+    .burger{
+        display: none;
+    }
+
+    header > nav:first-of-type{
+        grid-column: 2/3;
+    }
+
+    header > nav:first-of-type > ul{
+        display: flex;
+        list-style: none;
+        padding-left: 1.5rem;
+    }
+
+    header > nav input[type=checkbox]:checked ~ ul{
+        position: static;
+        flex-direction: row;  
+    }
+
+    .menu input[type=checkbox]:checked ~ ul{
+        background-color: var(--White);
+        height: max-content;
+        font-weight: 400;
+        align-items:flex-start;
+        min-height:inherit;
+        width: inherit;
+        padding: 0;
+    }
+
+    .menu li{
+        padding: 0 1rem;
+        padding-bottom: 0rem;
+    }
+
+    .menu a{
+        color: var(--Darkgrayishblue);
+        font-size: 0.9375rem;
+    }
+
+    header > nav input[type=checkbox]:checked + label > div{
+        display: none;
+    }
+
+    .logo{
+        padding-right: 0rem;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .cart{
+        padding: 0 0rem;
+        margin-top: 0rem;
+    }
+
+    #number_items{
+        color: var(--White);
+        text-align: center;
+        font-size: 0.6rem;
+
+        width: 1.1rem;
+        padding: 0.01rem 0;
+        position: absolute;
+        top: initial;
+        left: initial;
+        margin-top: -1.9rem;
+        margin-left: 0.5rem;
+
+        border-radius: 0.4rem;
+        background-color: hsl(26, 100%, 55%);
+    }
+
+    .user{
+        width: 3rem;
+        margin-top: 0rem;
+        align-self: center;
+        justify-self: flex-end;
+    }
+
+    .cart_resume{
+        grid-column: 3/4;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .cart_resume input[type=checkbox]:checked ~ ul{
+        width: 22.5rem;
+        left: 60%;
+
+        box-shadow: 0 25px 50px -20px hsl(0, 0%, 0%, 0.7);
+    }
+
+    .cart_resume ul{
+        position: absolute;
+        z-index: 1000;
+    }
+
+    /*Main page*/
+    main{
+        display: flex;
+
+        padding: 5.4rem 3rem;
+    }
+    /*Conteneur d'images*/
+    .mini{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 2rem ;
+    }
+
+    .mini > div{
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 0.6rem;
+    }
+
+    .mini > div:first-of-type{
+        background-image: url('images/image-product-1-thumbnail.jpg');
+    }
+    #mini_2{
+        background-image: url('images/image-product-2-thumbnail.jpg');
+    }
+    #mini_3{
+        background-image: url('images/image-product-3-thumbnail.jpg');
+    }
+    #mini_4{
+        background-image: url('images/image-product-4-thumbnail.jpg');
+    }
+
+    #mini2{
+        background-image: url('images/image-product-2-thumbnail.jpg');
+    }
+    #mini3{
+        background-image: url('images/image-product-3-thumbnail.jpg');
+    }
+    #mini4{
+        background-image: url('images/image-product-4-thumbnail.jpg');
+    }
+
+    .focus{
+        border: 0.15rem solid hsl(26, 100%, 55%);
+        width: 5.7rem;
+        height: 5.7rem;
+    }
+    
+    #mini_1[class='focus']{
+        background-image: linear-gradient(hsla(0,100%,100%,0.7), hsla(0,100%,100%, 0.7)), url('images/image-product-1-thumbnail.jpg');
+    }
+    #mini_2[class='focus']{
+        background-image: linear-gradient(hsla(0,100%,100%,0.7), hsla(0,100%,100%, 0.7)),url('images/image-product-2-thumbnail.jpg');
+    }
+    #mini_3[class='focus']{
+        background-image: linear-gradient(hsla(0,100%,100%,0.7), hsla(0,100%,100%, 0.7)),url('images/image-product-3-thumbnail.jpg');
+    }
+    #mini_4[class='focus']{
+        background-image: linear-gradient(hsla(0,100%,100%,0.7), hsla(0,100%,100%, 0.7)),url('images/image-product-4-thumbnail.jpg');
+    }
+
+        
+    #mini1[class='focus']{
+        background-image: linear-gradient(hsla(0,100%,100%,0.7), hsla(0,100%,100%, 0.7)), url('images/image-product-1-thumbnail.jpg');
+    }
+    #mini2[class='focus']{
+        background-image: linear-gradient(hsla(0,100%,100%,0.7), hsla(0,100%,100%, 0.7)),url('images/image-product-2-thumbnail.jpg');
+    }
+    #mini3[class='focus']{
+        background-image: linear-gradient(hsla(0,100%,100%,0.7), hsla(0,100%,100%, 0.7)),url('images/image-product-3-thumbnail.jpg');
+    }
+    #mini4[class='focus']{
+        background-image: linear-gradient(hsla(0,100%,100%,0.7), hsla(0,100%,100%, 0.7)),url('images/image-product-4-thumbnail.jpg');
+    }
+
+    .focused{
+        width: 27.8rem;
+        height: 27.8rem;
+        border-radius: 1rem;
+    }
+
+    .conteneur > button{
+        display: none;
+    }
+
+    /*Fiche produit*/
+    .resume_product{
+        padding: 4rem 0rem 0rem 8vw;
+    }
+
+    .resume_product > *{
+        padding-bottom: 2.3rem;
+    }
+
+    .resume_product h2{
+        font-size: 0.85rem;
+        letter-spacing: 0.1rem;
+        padding-bottom: 1rem;
+    }
+
+    .resume_product h3{
+        font-size: 2.8rem;
+        line-height: 3rem;
+    }
+
+    .resume_product p{
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .price{
+        display: grid;
+        grid-template-columns: min-content auto;
+        grid-template-rows: auto auto;
+        row-gap: 0.7rem;
+        align-items: center;
+        padding-top: 0.5rem;
+    }
+
+    .quantity_checkout{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /*Quantitée*/
+    .quantity{
+        width: 9.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0rem;
+
+        padding: 1.2rem 1rem;
+    }
+
+    /*Add to cart button*/
+    #add_cart{
+        width: 17rem;
+        margin-top: 0rem;
+    }
+
+    /*Lightbox*/
+
+    .lightbox{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        top: 10%;
+        left: 30.8%;
+    }
+
+    #close_light{
+        align-self: flex-end;
+        position: relative;
+        background-color: hsla(0,0%,0%, 0);
+        border: none;
+        width: initial;
+        height: initial;
+    }
+
+    #close_light > svg > path{
+        fill: var(--White);
+    }
+
+    .lightbox > button{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        width: 3.5rem;
+        height: 3.5rem;
+        top: 40%;
+        background-color: var(--White);
+        border-radius: 50%;
+    }
+
+    
+    #previousl{
+        left: -1.5rem;
+    }
+
+
+    #nextl{
+        right: -1.5rem;
+    }
+
+    .lightbox .focused{
+        width: 34.5rem;
+        height: 34.5rem;
+        margin-top: -0.5rem;
+    }
+
+    .lightbox .mini{
+        align-self: center;
+        width: 81%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 2.5rem ;
+    }
+
+    /*Hover effect*/
+    .menu a:hover{
+        color: var(--Black);
+        padding-bottom: 3.2rem;
+        border-bottom: 0.3rem solid hsl(26, 100%, 55%);
+    }
+
+    .user:hover{
+        border: 0.01rem solid hsl(26, 100%, 55%);
+        cursor: pointer;
+        border-radius: 50%;
+        transform: scale(1.1) translate(0rem, -0.2rem);
+        transition:transform 0.2s;
+    }
+
+    .cart:hover{
+        cursor: pointer;
+        transform: scale(1.1) translate(0rem, -0.2rem);
+        transition: all 0.2s;
+    }
+
+    .unfocus:hover{
+        cursor: pointer;
+        opacity: 0.4;
+        transition: all 0.2s;
+    }
+
+    .quantity > img:hover{
+        cursor: pointer;
+        opacity: 0.7;
+        transition: all 0.2s;
+    }
+
+    #add_cart:hover{
+        cursor: pointer;
+        opacity: 0.7;
+        transition: all 0.2s;
+    }
+
+    #nextl:hover{
+        cursor: pointer;
+    }
+    #previousl:hover{
+        cursor: pointer;
+    }
+    #close_light:hover{
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .cart_resume input[type=checkbox]:checked ~ ul{
+        left: 71.8%;
+    }
+}
