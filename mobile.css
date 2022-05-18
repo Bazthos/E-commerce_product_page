@@ -397,9 +397,12 @@ main{
     background-color: var(--Lightgrayishblue);
     border-radius: 0.5rem;
     margin-top: 0.5rem;
-
-    padding: 1.2rem 1.5rem;
+    
     font-weight: 700;
+}
+
+.quantity > *{
+    padding: 1.2rem 1.5rem;
 }
 
 /*Add to cart button*/

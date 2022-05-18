@@ -202,25 +202,7 @@ function focus4(){
     n = 3;
 }
 
-if(screen > 975){
-    focused.addEventListener('click', ()=>{
-        lightbox.style.display = 'flex';
-        removenone(cache);
-    })
-
-    close_light.addEventListener('click', ()=>{
-        lightbox.style.display = 'none';
-        addnone(cache);
-    })
-
-    close_light.addEventListener('mouseover', ()=>{
-        croix.style.fill = 'hsl(26, 100%, 55%)';
-    })
-
-    close_light.addEventListener('mouseleave', ()=>{
-        croix.style.fill = 'hsl(0, 0%, 100%)';
-    })
-
+if(screen > 767){
     mini1.addEventListener('click', ()=>{
         focus1();
     })
@@ -251,6 +233,27 @@ if(screen > 975){
 
     mini_4.addEventListener('click', ()=>{
         focus4();
+    })
+}
+
+if(screen > 975){
+    focused.addEventListener('click', ()=>{
+        lightbox.style.display = 'flex';
+        removenone(cache);
+        close_light.scrollIntoView({block : 'start'});
+    })
+
+    close_light.addEventListener('click', ()=>{
+        lightbox.style.display = 'none';
+        addnone(cache);
+    })
+
+    close_light.addEventListener('mouseover', ()=>{
+        croix.style.fill = 'hsl(26, 100%, 55%)';
+    })
+
+    close_light.addEventListener('mouseleave', ()=>{
+        croix.style.fill = 'hsl(0, 0%, 100%)';
     })
 }
 

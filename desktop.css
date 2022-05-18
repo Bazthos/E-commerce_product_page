@@ -1,135 +1,64 @@
-@media screen and (min-width:975px){
+@media screen and (min-width: 768px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr 4fr 10fr 1fr;
+        border-bottom: 1px solid  var(--Grayishblue);
+    
+        padding: 0.8rem 3rem 1.3rem;
+    }
+
+    .cart_resume{
+        align-self: flex-end;
+        justify-self: flex-end;
+        padding-right: 2rem;
+    }
+
+
+    .cart_resume input[type=checkbox]:checked ~ ul{
+        width: 22.5rem;
+        left: 50%;
+
+        box-shadow: 0 25px 50px -20px hsl(0, 0%, 0%, 0.7);
+    }
+
 
     body{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: var(--White);
-        margin: 1.8rem 10rem;
-    }
-    /*Header*/
-    header{
-        position: sticky;
-        top: initial;
-        display: grid;
-        grid-template-columns: 0.14fr 0.75fr 0.065fr 0.065fr;
-        grid-template-rows: auto;
-        justify-content: center;
-        border-bottom: 1px solid  var(--Grayishblue);
-        padding: 1.8rem 0rem 2.3rem;
-        width: 77vw;
+        min-height: 100vh;
     }
 
-    .burger{
-        display: none;
-    }
-
-    header > nav:first-of-type{
-        grid-column: 2/3;
-    }
-
-    header > nav:first-of-type > ul{
+    main{
         display: flex;
-        list-style: none;
-        padding-left: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 5rem 3rem 0;
     }
 
-    header > nav input[type=checkbox]:checked ~ ul{
-        position: static;
-        flex-direction: row;  
-    }
-
-    .menu input[type=checkbox]:checked ~ ul{
-        background-color: var(--White);
-        height: max-content;
-        font-weight: 400;
-        align-items:flex-start;
-        min-height:inherit;
-        width: inherit;
-        padding: 0;
-    }
-
-    .menu li{
-        padding: 0 1rem;
-        padding-bottom: 0rem;
-    }
-
-    .menu a{
-        color: var(--Darkgrayishblue);
-        font-size: 0.9375rem;
-    }
-
-    header > nav input[type=checkbox]:checked + label > div{
-        display: none;
-    }
-
-    .logo{
-        padding-right: 0rem;
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-
-    .cart{
-        padding: 0 0rem;
-        margin-top: 0rem;
-    }
-
-    #number_items{
-        color: var(--White);
-        text-align: center;
-        font-size: 0.6rem;
-
-        width: 1.1rem;
-        padding: 0.01rem 0;
-        position: absolute;
-        top: initial;
-        left: initial;
-        margin-top: -1.9rem;
-        margin-left: 0.5rem;
-
-        border-radius: 0.4rem;
-        background-color: hsl(26, 100%, 55%);
-    }
-
-    .user{
-        width: 3rem;
-        margin-top: 0rem;
-        align-self: center;
-        justify-self: flex-end;
-    }
-
-    .cart_resume{
-        grid-column: 3/4;
+    .focused{
+        width: 27.8rem;
+        height: 27.8rem;
+        border-radius: 1rem;
         align-self: center;
         justify-self: center;
     }
 
-    .cart_resume input[type=checkbox]:checked ~ ul{
-        width: 22.5rem;
-        left: 60%;
-
-        box-shadow: 0 25px 50px -20px hsl(0, 0%, 0%, 0.7);
-    }
-
-    .cart_resume ul{
-        position: absolute;
-        z-index: 1000;
-    }
-
-    /*Main page*/
-    main{
-        display: flex;
-
-        padding: 5.4rem 3rem;
-    }
     /*Conteneur d'images*/
-    .mini{
-        width: 100%;
+    .conteneur{
         display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 0 3rem;
+    }
+    .mini{
+        width: 5.5rem;
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        padding-top: 2rem ;
+        padding: 1rem 0 1rem;
     }
 
     .mini > div{
@@ -196,10 +125,157 @@
         background-image: linear-gradient(hsla(0,100%,100%,0.7), hsla(0,100%,100%, 0.7)),url('images/image-product-4-thumbnail.jpg');
     }
 
-    .focused{
-        width: 27.8rem;
-        height: 27.8rem;
-        border-radius: 1rem;
+    .resume_product{
+        padding: 3rem 0rem;
+    }
+
+    .conteneur > button{
+        display: none;
+    }
+}
+
+@media screen and (min-width:975px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--White);
+        margin: 0rem 10rem;
+    }
+    /*Header*/
+    header{
+        position: sticky;
+        top: initial;
+        display: grid;
+        grid-template-columns: 0.14fr 0.75fr 0.065fr 0.065fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        border-bottom: 1px solid  var(--Grayishblue);
+        padding: 1rem 0rem 2.3rem;
+        width: 77vw;
+    }
+
+    .burger{
+        display: none;
+    }
+
+    header > nav:first-of-type{
+        grid-column: 2/3;
+    }
+
+    header > nav:first-of-type > ul{
+        display: flex;
+        list-style: none;
+        padding-left: 1.5rem;
+    }
+
+    header > nav input[type=checkbox]:checked ~ ul{
+        position: static;
+        flex-direction: row;  
+    }
+
+    .menu input[type=checkbox]:checked ~ ul{
+        background-color: var(--White);
+        height: max-content;
+        font-weight: 400;
+        align-items:flex-start;
+        min-height:inherit;
+        width: inherit;
+        padding: 0;
+    }
+
+    .menu li{
+        padding: 0 1rem;
+        padding-bottom: 0rem;
+    }
+
+    .menu a{
+        color: var(--Darkgrayishblue);
+        font-size: 0.9375rem;
+    }
+
+    header > nav input[type=checkbox]:checked + label > div{
+        display: none;
+    }
+
+    .logo{
+        padding-right: 0rem;
+        padding-left: 0;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .cart{
+        padding: 0 0rem;
+        margin-top: 0rem;
+    }
+
+    #number_items{
+        color: var(--White);
+        text-align: center;
+        font-size: 0.6rem;
+
+        width: 1.1rem;
+        padding: 0.01rem 0;
+        position: absolute;
+        top: initial;
+        left: initial;
+        margin-top: -1.9rem;
+        margin-left: 0.5rem;
+
+        border-radius: 0.4rem;
+        background-color: hsl(26, 100%, 55%);
+    }
+
+    .user{
+        width: 3rem;
+        margin-top: 0rem;
+        margin-left: 0;
+        align-self: center;
+        justify-self: flex-end;
+    }
+
+    .cart_resume{
+        grid-column: 3/4;
+        padding-right: 0;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .cart_resume input[type=checkbox]:checked ~ ul{
+        width: 22.5rem;
+        left: 60%;
+
+        box-shadow: 0 25px 50px -20px hsl(0, 0%, 0%, 0.7);
+    }
+
+    .cart_resume ul{
+        position: absolute;
+        z-index: 1000;
+    }
+
+    /*Main page*/
+    main{
+        display: flex;
+        flex-direction: row;
+        padding: 5.4rem 3rem;
+    }
+    /*Conteneur d'images*/
+    .conteneur{
+        display: block;
+        justify-content: initial;
+        width: initial;
+        padding: 0;
+    }
+
+    .mini{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 2rem;
     }
 
     .conteneur > button{
@@ -208,7 +284,7 @@
 
     /*Fiche produit*/
     .resume_product{
-        padding: 4rem 0rem 0rem 8vw;
+        padding: 0.5rem 0rem 0rem 9vw;
     }
 
     .resume_product > *{
@@ -252,7 +328,9 @@
         align-items: center;
         justify-content: space-between;
         margin-top: 0rem;
+    }
 
+    .quantity > *{
         padding: 1.2rem 1rem;
     }
 
@@ -329,7 +407,7 @@
     /*Hover effect*/
     .menu a:hover{
         color: var(--Black);
-        padding-bottom: 3.2rem;
+        padding-bottom: 2.9rem;
         border-bottom: 0.3rem solid hsl(26, 100%, 55%);
     }
 
@@ -337,13 +415,10 @@
         border: 0.01rem solid hsl(26, 100%, 55%);
         cursor: pointer;
         border-radius: 50%;
-        transform: scale(1.1) translate(0rem, -0.2rem);
-        transition:transform 0.2s;
     }
 
     .cart:hover{
         cursor: pointer;
-        transform: scale(1.1) translate(0rem, -0.2rem);
         transition: all 0.2s;
     }
 
