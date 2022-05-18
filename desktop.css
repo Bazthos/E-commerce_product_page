@@ -132,6 +132,23 @@
     .conteneur > button{
         display: none;
     }
+    
+        .quantity_checkout{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .quantity{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0rem;
+    }
+
+    #add_cart{
+        width: 30rem;
+        margin-top: 0rem;
+    }
 }
 
 @media screen and (min-width:975px){
